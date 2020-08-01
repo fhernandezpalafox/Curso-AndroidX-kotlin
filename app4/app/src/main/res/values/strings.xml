@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">app4</string>
+    <string name="lblNumero">Numero</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="multiplicar">Multiplicar</string>
+    <string name="division">Division</string>
+    <string name="resultado">Resultado</string>
+</resources>
