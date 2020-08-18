@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">app8NotificacionesShourcuts</string>
+    <string name="my_shortcut">Nombre del shorcut</string>
+    <string name="my_shortcut_disabled">shorcut deshabilitado</string>
+</resources>

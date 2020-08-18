@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">app9internacionalizacion</string>
+    <string name="saludo">Hello world</string>
+    <string name="btnAceptar">Done</string>
+    <string name="lblinformacion">Information</string>
+    <string name="idioma">language</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_opcion1"
+            android:icon="@drawable/ic_build"
+            android:title="@string/opcion_1" />
+        <item
+            android:id="@+id/menu_opcion2"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/opcion_2" />
+        <item
+            android:id="@+id/menu_opcion3"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/seccion_2" />
+    </group>
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="@string/otras_opciones">
+
+        <item  android:id="@+id/menu_seccion2"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/seccion_2" />
+
+        <item android:id="@+id/menu_seccion3"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/seccion_3"/>
+    </item>
+</menu>
