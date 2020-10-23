@@ -7,7 +7,7 @@ import retrofit2.http.*
 
 interface RestClient {
 
-    @GET("articulos")
+    @GET("articulos")  // http://localhost:3001/articulos
     fun cargarArticulos(): Call<List<Articulo>>
 
     @POST("articulos")

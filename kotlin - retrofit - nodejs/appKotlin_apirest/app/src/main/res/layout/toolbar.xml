@@ -7,4 +7,5 @@
     android:layout_height="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
     app:layout_scrollFlags="scroll|enterAlways"
+    app:theme="@style/ToolbarColoredBackArrow"
     app:popupTheme="@style/AppTheme.PopupOverlay"/>

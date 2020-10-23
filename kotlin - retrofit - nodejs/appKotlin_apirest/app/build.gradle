@@ -50,5 +50,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.NaimishTrivedi:FBToast:1.0'
+    implementation 'io.sulek.ssml:simpleswipemenulayout:1.0.4'
 
 }

@@ -5,4 +5,5 @@ class Articulo {
     var id:String = ""
     var descripcion:String = ""
     var cantidad:Int = 0
+    var isExpanded: Boolean = false
 }

@@ -6,11 +6,11 @@ import Adaptadores.ArticulosAdapter
 import Entidades.Articulo
 import Interfaces.RestClient
 import android.content.Context
+import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.FieldNamingPolicy
-import com.google.gson.GsonBuilder
+import com.tfb.fbtoast.FBToast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,8 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class ArticulosController {
-
-    lateinit var listaArticulos: List<Articulo>
+    var listaArticulos: List<Articulo> = emptyList()
     lateinit var mAdapter: RecyclerView.Adapter<*>
     lateinit var recyclerViewArticulos2: RecyclerView
     lateinit var progressbar: ProgressBar
@@ -31,6 +30,7 @@ class ArticulosController {
 
 
     fun cargarArticulos(recyclerViewArticulos: RecyclerView, context: Context, queryBusqueda: String, progressdialog: ProgressBar) {
+
 
         this.context = context
 
@@ -55,6 +55,7 @@ class ArticulosController {
             override fun onResponse(call: Call<List<Articulo>>, response: Response<List<Articulo>>) {
                 when (response.code()) {
                     200 -> {
+                        Log.i("Entro http 200",listaArticulos.toString())
                         listaArticulos =  emptyList()
                         listaArticulos = response.body()!!
 
@@ -77,4 +78,22 @@ class ArticulosController {
         })
     }
 
+
+    fun insertarArticulos(objArticulo: Articulo, context: Context): Call<Articulo> {
+
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://192.168.200.216:3001/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+
+        val restClient: RestClient = retrofit.create(RestClient::class.java)
+
+        val call: Call<Articulo> = restClient.insertarArticulo(objArticulo)
+
+        return call;
+
+
+    }
 }
